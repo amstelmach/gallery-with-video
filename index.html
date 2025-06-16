@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smartrecruiters task - gallery with video</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div class="container">
+    <section class="gallery" aria-labelledby="gallery-title">
+      <h2 class="gallery__heading" id="gallery-title">Snippet Heading</h2>
+      <p class="gallery__description">
+        Lorem ipsum dolor sit amet, <strong>consectetur</strong> adipiscing elit, sed do eiusmod tempor
+        incididunt ut labore et dolore magna aliqua. Ut enim ad <a href="#">minim</a> veniam, quis nostrud
+        exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      </p>
+      <h3 class="gallery__subheading">Links</h3>
+      <div class="gallery__links">
+        <a href="#" class="button button--primary">Link One ★</a>
+        <a href="#" class="button button--secondary">Link Two</a>
+      </div>
+      <ul class="gallery__list">
+        <li class="gallery__group gallery__group--left">
+          <figure class="gallery__item">
+            <img src="assets/images/image_1.png" alt="Robot" class="gallery__image"/>
+          </figure>
+          <figure class="gallery__item">
+            <img src="assets/images/image_2.png" alt="Team meeting" class="gallery__image"/>
+          </figure>
+          <figure class="gallery__item">
+            <img src="assets/images/image_3.png" alt="City panorama" class="gallery__image"/>
+          </figure>
+        </li>
+        <li class="gallery__group gallery__group--right">
+          <figure class="gallery__item gallery__item--video">
+            <button
+              class="gallery__play-button"
+              aria-label="Play video: video title"
+              data-video-id="video-id-placeholder"
+            >
+              <img src="assets/images/image_4_video.png" alt="" class="gallery__image"/>
+              <span class="gallery__play-icon" aria-hidden="true">►</span>
+            </button>
+          </figure>
+          <figure class="gallery__item">
+            <img src="assets/images/image_5.png" alt="Person on a meeting" class="gallery__image"/>
+          </figure>
+        </li>
+      </ul>
+      <p class="gallery__copyright">
+        <strong>Media copyright</strong> – Lorem ipsum dolor sit amet.
+      </p>
+    </section>
+  </div>
+</body>
+</html>
