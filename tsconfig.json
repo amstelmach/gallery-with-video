@@ -1,11 +1,17 @@
 {
-    "compilerOptions": {
-      "target": "ES6",
-      "module": "ESNext",
-      "outDir": "build",
-      "rootDir": "src/ts",
-      "strict": true,
-      "esModuleInterop": true
-    },
-    "include": ["src/ts"]
-  }  
+  "compilerOptions": {
+    "target": "ES2020",           
+    "module": "ESNext",
+    "lib": ["DOM", "ES2020"],     
+    "moduleResolution": "node",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "rootDir": "src/ts",
+    "outDir": "build",
+    "types": ["node"]
+  },
+  "include": ["src/ts/**/*"],
+  "exclude": ["node_modules", "build", "dist", "tests"]
+}

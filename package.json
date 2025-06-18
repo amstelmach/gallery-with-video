@@ -4,16 +4,21 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "build:ts": "tsc --watch",
     "build:sass": "sass --watch src/scss:dist",
-    "start": "npm run build:ts & npm run build:sass"
+    "start": "npm run build:ts & npm run build:sass",
+    "build": "tsc",
+    "test": "jest" 
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/jest": "^30.0.0",
+    "jest": "^30.0.0",
+    "jest-environment-jsdom": "^30.0.0",
     "sass": "^1.89.2",
+    "ts-jest": "^29.4.0",
     "typescript": "^5.8.3"
   }
 }
