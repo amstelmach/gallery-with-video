@@ -7,8 +7,16 @@ $color-black: #000000;
 $color-white: #FFFFFF;
 $color-content: #222222;
 $color-danger: #9F0000;
+$gradient-bg: linear-gradient(180deg, #FFFFFF 0%, #E9ECE7 100%);
+$space-xxs: 8px;
+$space-xs: 15px;
+$space-sm: 20px;
+$space-md: 30px; 
+$radius-sm: 8px;
+$radius-md: 20px;
 
 // global reset
+body,
 h1,
 h2,
 h3,
@@ -99,28 +107,25 @@ html {
 }
 
 body {
-    background: $color-white;
+    background: $gradient-bg;
 }
 
 // container
 .container {
     width: 100%;
-    padding: 30px;
+    padding: $space-md;
 
     @media (min-width: 768px) {
         max-width: 1200px;
         margin: 0 auto;
-        padding: 0 16px;
     }
 }
 
 // gallery
 .gallery {
-    padding: 16px 0;
-
     &__heading {
         @extend %heading-2;
-        margin-bottom: 16px;
+        color: $color-primary;
 
         @media (min-width: 768px) {
             text-align: center;
@@ -130,7 +135,7 @@ body {
     &__description {
         @extend %paragraph;
         max-width: 800px;
-        margin: 20px auto;
+        margin: $space-sm auto;
 
         a {
             @extend %link-text;
@@ -140,7 +145,8 @@ body {
 
     &__subheading {
         @extend %heading-3;
-        margin: 20px auto;
+        margin: $space-sm auto;
+        color: $color-primary;
 
         @media (min-width: 768px) {
             text-align: center;
@@ -153,7 +159,7 @@ body {
 
     &__links {
         display: flex;
-        gap: 15px;
+        gap: $space-xs;
 
         @media (min-width: 768px) {
             justify-content: center;
@@ -163,9 +169,9 @@ body {
             @extend %button-text;
             display: inline-flex;
             align-items: center;
-            gap: 8px;
+            gap: $space-xxs;
             padding: 8px 24px;
-            border-radius: 8px;
+            border-radius: $radius-sm;
             cursor: pointer;
             border: none;
             text-decoration: none;
@@ -212,8 +218,8 @@ body {
     &__list {
         display: flex;
         flex-direction: column;
-        gap: 30px;
-        margin: 20px auto;
+        gap: $space-md;
+        margin: $space-sm auto;
 
         @media (min-width: 768px) {
             flex-direction: row;
@@ -221,7 +227,7 @@ body {
 
         &>.gallery__group--left {
             display: grid;
-            gap: 30px;
+            gap: $space-md;
             grid-template-columns: 1fr;
 
             @media (min-width: 768px) {
@@ -237,7 +243,7 @@ body {
 
         &>.gallery__group--right {
             display: grid;
-            gap: 30px;
+            gap: $space-md;
 
             @media (min-width: 768px) {
                 grid-template-columns: 1fr;
@@ -257,7 +263,7 @@ body {
                 width: 48px;
                 height: 48px;
                 padding: 8px 8px 8px 12px;
-                border-radius: 48px;
+                border-radius: 50%;
                 background-color: $color-primary;
                 display: inline-flex;
                 align-items: center;
@@ -288,7 +294,6 @@ body {
         .gallery__image {
             display: block;
             width: 100%;
-            border-radius: 8px;
         }
     }
 
@@ -320,18 +325,18 @@ body {
         background: $color-quaternary;
         width: 100vw;
         height: 100vh;
-        padding: 20px;
+        padding: $space-md;
         display: flex;
         flex-direction: column;
-        gap: 16px;
+        gap: $space-sm;
         overflow: hidden;
 
         @media (min-width: 768px) {
             width: 1260px;
             height: 889px;
-            padding: 30px;
-            gap: 20px;
-            border-radius: 20px;
+            padding: $space-md;
+            gap: $space-sm;
+            border-radius: $radius-md;
             overflow: visible;
         }
     }
@@ -382,7 +387,7 @@ body {
         display: flex;
         flex: 1;
         width: 100%;
-        border-radius: 20px;
+        border-radius: $radius-md;
         overflow: hidden;
 
         &-placeholder {
