@@ -22,16 +22,20 @@ function initVideoModal() {
 
   if (!modal || !overlay || !closeBtn || !videoContainer || !playBtn) return;
 
-  playBtn.addEventListener('click', event => {
+  playBtn.addEventListener('click', (event) => {
     event.preventDefault();
     const videoId = playBtn.getAttribute('data-video-id');
     if (!videoId) return;
 
-    const iframe = createYouTubeIframe(videoId);
-    videoContainer.appendChild(iframe);
-
     modal.classList.add('modal--open');
     modal.setAttribute('aria-hidden', 'false');
+
+    videoContainer.innerHTML = '';
+
+    if (window.matchMedia('(min-width: 768px)').matches) {
+      const iframe = createYouTubeIframe(videoId);
+      videoContainer.appendChild(iframe);
+    }
 
     closeBtn.focus();
   });
